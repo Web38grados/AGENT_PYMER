@@ -17,3 +17,14 @@ env/
 
 serviceAccountKey.json
 serviceAccountKey.json
+#  Google Cloud Credentials
+config/service-account.json
+config/*.json
+
+#  Entornos
+.env
+*.env
+
+# 🔒 Archivos sensibles de configuración
+config/firebase_config.py
+
