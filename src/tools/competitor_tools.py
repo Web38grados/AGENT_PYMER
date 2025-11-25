@@ -4,6 +4,7 @@ from typing import Dict, List, Any
 from google.adk.tools import FunctionTool
 from src.context.user_context import get_user_context
 from dotenv import load_dotenv
+import logging
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -17,19 +18,7 @@ def buscar_competidores(
     pais: str = "Colombia",
     radio_km: int = 5
 ) -> Dict[str, Any]:
-    """
-    Busca empresas competidoras en un área geográfica específica.
-    El user_id se obtiene automáticamente del contexto de sesión.
-    
-    Args:
-        industria: Tipo de negocio (ej: "restaurante", "ferretería", "panadería")
-        ciudad: Ciudad donde buscar
-        pais: País (default: Colombia)
-        radio_km: Radio de búsqueda en kilómetros (default: 5km)
-        
-    Returns:
-        Lista de competidores con información relevante
-    """
+
     user_id = get_user_context()  
     logger.info(f" Buscando competidores para usuario: {user_id}")
     
@@ -115,7 +104,7 @@ def buscar_competidores(
 def analizar_mercado(
     industria: str,
     ciudad: str,
-    mi_precio_promedio: float = None
+    mi_precio_promedio: float = 0.0
 ) -> Dict[str, Any]:
     """
     Analiza el mercado local del usuario y proporciona insights sobre la competencia.

@@ -34,12 +34,12 @@ def obtener_datos_financieros() -> Dict[str, List[Dict[str, Any]]]:
             docs = db.collection(col).where("userId", "==", user_id).get()
             data = [doc.to_dict() for doc in docs]
             resultados[col] = data
-            logger.info(f"📊 Datos obtenidos de '{col}' para {user_id}: {len(data)} registros")
+            logger.info(f" Datos obtenidos de '{col}' para {user_id}: {len(data)} registros")
         
         return resultados
         
     except Exception as e:
-        logger.error(f"❌ Error obteniendo datos para {user_id}: {e}")
+        logger.error(f" Error obteniendo datos para {user_id}: {e}")
         return {col: [] for col in colecciones}
 
 
@@ -87,7 +87,7 @@ def calcular_punto_equilibrio(precio_venta: float, costo_variable_unitario: floa
         }
         
     except Exception as e:
-        logger.error(f"❌ Error calculando punto de equilibrio: {e}")
+        logger.error(f" Error calculando punto de equilibrio: {e}")
         return {"status": "error", "message": str(e)}
 
 
@@ -134,7 +134,7 @@ def analizar_rentabilidad(ventas_mensuales: float, costo_ventas: float) -> Dict[
         }
         
     except Exception as e:
-        logger.error(f"❌ Error analizando rentabilidad: {e}")
+        logger.error(f" Error analizando rentabilidad: {e}")
         return {"status": "error", "message": str(e)}
 
 
@@ -168,7 +168,7 @@ def proyectar_ventas(ventas_actuales: float, crecimiento_porcentaje: float, mese
         }
         
     except Exception as e:
-        logger.error(f"❌ Error proyectando ventas: {e}")
+        logger.error(f" Error proyectando ventas: {e}")
         return {"status": "error", "message": str(e)}
 
 
