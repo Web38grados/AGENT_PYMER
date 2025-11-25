@@ -4,7 +4,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Variable de contexto para almacenar el user_id de la sesión actual
 current_user_id: ContextVar[Optional[str]] = ContextVar('current_user_id', default=None)
 
 

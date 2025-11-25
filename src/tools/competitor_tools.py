@@ -75,7 +75,7 @@ def buscar_competidores(
                 "rating": place.get("rating", "N/A"),
                 "total_reseñas": place.get("user_ratings_total", 0),
                 "tipos": place.get("types", []),
-                "precio_nivel": "💰" * place.get("price_level", 0) if place.get("price_level") else "N/A",
+                "precio_nivel": place.get("price_level", 0) if place.get("price_level") else "N/A",
                 "abierto_ahora": place.get("opening_hours", {}).get("open_now", "N/A"),
                 "lugar_id": place.get("place_id")
             }
@@ -141,7 +141,7 @@ def analizar_mercado(
         rating_promedio = sum(ratings) / len(ratings) if ratings else 0
         
         # Análisis de precios
-        precios = [c["precio_nivel"].count("💰") for c in competidores if c["precio_nivel"] != "N/A"]
+        precios = [c["precio_nivel"].count for c in competidores if c["precio_nivel"] != "N/A"]
         precio_promedio_mercado = sum(precios) / len(precios) if precios else 0
         
         # Análisis de reseñas
