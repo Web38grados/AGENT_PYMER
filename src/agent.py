@@ -25,7 +25,7 @@ except FileNotFoundError:
 # Crear agente
 root_agent = Agent(
     name="asesor_pymer",
-    model="gemini-2.0-flash-exp",
+    model="gemini-3-pro-preview",
     instruction=instruccion,
     tools=ALL_TOOLS,
 )

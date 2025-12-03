@@ -5,7 +5,8 @@ from src.tools.financial_tools import (
     proyectar_ventas_tool
 )
 
-from .competitor_tools import buscar_competidores_tool, analizar_mercado_tool
+from .competitor_tools import buscar_competidores_tool
+
 
 
 
@@ -14,9 +15,9 @@ ALL_TOOLS = [
     calcular_punto_equilibrio_tool,
     analizar_rentabilidad_tool,
     proyectar_ventas_tool,
-    buscar_competidores_tool,
-    analizar_mercado_tool
+    buscar_competidores_tool
 ]
+
 
 __all__ = [
     'ALL_TOOLS',
@@ -24,7 +25,5 @@ __all__ = [
     'calcular_punto_equilibrio_tool',
     'analizar_rentabilidad_tool',
     'proyectar_ventas_tool',
-    'buscar_competidores_tool',
-    'analizar_mercado_tool'
-
+    'buscar_competidores_tool'
 ]
