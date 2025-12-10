@@ -1,4 +1,6 @@
-from config.firebase_config import FirebaseConnection
+import sys
+import os
+from src.config.firebase_config import FirebaseConnection
 from google.adk.tools import FunctionTool
 from src.context.user_context import get_user_context
 from typing import Dict, List, Any
