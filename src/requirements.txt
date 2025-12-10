@@ -3,3 +3,5 @@ firebase_admin
 google-cloud-firestore
 fastapi
 uvicorn
+python-dotenv>=1.0.0
+google-cloud-storage

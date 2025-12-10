@@ -1,0 +1,15 @@
+
+# Carpetas que no deben copiarse al contenedor
+.git
+.gitignore
+.vscode
+venv
+__pycache__
+
+# Archivos innecesarios
+*.pyc
+*.pyo
+*.log
+
+# Variables privadas
+.env
